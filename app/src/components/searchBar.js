@@ -10,13 +10,13 @@ setWord(e.target.value);
         setWord("");
     }
     return(
-        <>
-        <header>Dictionary Search Bar</header>
+    
         <form onSubmit={onSubmit}>
-            <input type="text" placeholder="word" value={word} onChange={changeHandle} />
+            <label htmlFor="word">Dictionary:</label>
+            <input name="word" type="text" placeholder="     word" value={word} onChange={changeHandle} />
             <button type="submit">Search</button>
         </form>
-        </>
+      
     )
 };
 

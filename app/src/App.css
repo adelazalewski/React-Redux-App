@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #F6F7F8;
+  background-color: #FF3366;
 }
 
 .App-header {
@@ -15,6 +15,7 @@
 footer{
   background-color: #20A4F3;
   color: white;
+  margin-bottom: none;
 }
 footer .social{
   padding: 1rem;
@@ -27,29 +28,54 @@ footer a{
 #like-logo{
   width: 7rem;
 }
-/* html, body{
-  height: 100%;
-  margin: 0;
-}
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -50px;
-}
-.footer,
-.push {
-  height: 50px;
-} */
+
 footer p {
   padding: 1rem;
 }
 input{
   border-radius: 4px;
-  
-  
- 
-  border: 2px solid #FF3366;
+  border: 2px solid  #2EC4B6;
+  background-image: url("searchIcon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* margin: 1rem; */
 }
-hr{
-  color: #2EC4B6;
+input::placeholder{
+  
+  color: #FF3366;
+  font-weight: bold;
+}
+input:focus{
+  background-image: none;
+}
+form label{
+  color: white;
+  margin: 2rem;
+  font-style: oblique;
+}
+button{
+  margin: 1rem;
+  color: #FF3366;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 10px;
+}
+/* hr{
   width: 50%;
+} */
+.word-info-container{
+  color: white;
+  background-color: #2EC4B6;
+  width: 50%;
+  align-self: center;
+  /* box-shadow: 5px 5px 8px 2px #FF3366; */
+  padding:1rem;
+  margin: 0 auto;
 }
+/* form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+} */

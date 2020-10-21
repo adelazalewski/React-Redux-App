@@ -5,13 +5,14 @@ import Footer from "./components/footer";
 import './App.css';
 import WordCard from './components/wordInfo';
 
+
 function App() {
   return (
     <div className="App">
       <Header />
       <div className="wrapper">
       <SearchBar />
-      <hr/>
+      {/* <hr/> */}
       {/* <div className="push"></div> */}
      
       <WordCard />
