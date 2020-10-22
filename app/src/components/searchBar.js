@@ -1,6 +1,8 @@
 import React, { useState } from  "react";
+import {connect} from "react-redux";
+import {getWordInfo} from "../actions/actions";
 
-function SearchBar() {
+function SearchBar(props) {
     const [word, setWord] = useState("")
     const changeHandle = (e) => {
 setWord(e.target.value);
@@ -14,10 +16,14 @@ setWord(e.target.value);
         <form onSubmit={onSubmit}>
             <label htmlFor="word">Dictionary:</label>
             <input name="word" type="text" placeholder="     word" value={word} onChange={changeHandle} />
-            <button type="submit">Search</button>
+            <button onClick={() => props.getWordInfo(word)} type="submit">Search</button>
         </form>
       
     )
 };
-
-export default SearchBar;
+const mapStateToProps = (state) => {
+    return {
+        wordInfo: state.wordInfo
+    }
+}
+export default connect(mapStateToProps, {getWordInfo})(SearchBar);
