@@ -4,11 +4,17 @@
   text-align: center;
   background-color: #FF3366;
   min-height: 100%;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: space-between;
 }
-
+.lama-picture{
+  width: 100%;
+  margin: 0 auto;
+}
+.pumpkin{
+  color: white;
+}
 .App-header {
   background-color: #011627;
   display: flex;
@@ -33,9 +39,11 @@ footer a{
   padding: 1rem;
 }
 #like-logo{
-  width: 7rem;
+  width: 4rem;
 }
-
+.likeButton-div{
+  font-size: 70%;
+}
 footer p {
   padding: 1rem;
 }
@@ -45,7 +53,6 @@ input{
   background-image: url("searchIcon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  /* margin: 1rem; */
 }
 input::placeholder{
   
@@ -67,9 +74,7 @@ button{
   border: 1px solid;
   border-radius: 10px;
 }
-/* hr{
-  width: 50%;
-} */
+
 .word-info-container{
   color: white;
   background-color: #2EC4B6;
@@ -79,10 +84,11 @@ button{
   padding:1rem;
   margin: 0 auto;
 }
-/* form{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 50%;
-  margin: 0 auto;
-} */
+@media(min-width: 800px){
+  .App-header{
+flex-direction: row;
+  }
+  .lama-picture{
+    width: 50%;
+  }
+}

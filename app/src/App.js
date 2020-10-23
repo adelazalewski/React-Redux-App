@@ -6,18 +6,20 @@ import './App.css';
 import WordCard from './components/wordCard';
 
 
-function App() {
+
+function App(props) {
   return (
     <div className="App">
       <Header />
-      <div className="wrapper">
+      
       <SearchBar />
       <WordCard />
-      </div>
+      
       <Footer />
     </div>
   );
-}
+};
+
 
 export default App;
 //bit object that has word key/value
