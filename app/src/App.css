@@ -1,6 +1,12 @@
+/* #F6F7F8 */
 .App {
+  position: absolute;
   text-align: center;
   background-color: #FF3366;
+  min-height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
 
 .App-header {
@@ -16,6 +22,7 @@ footer{
   background-color: #20A4F3;
   color: white;
   margin-bottom: none;
+  /* position: absolute; */
 }
 footer .social{
   padding: 1rem;

@@ -15,21 +15,21 @@ export const getWordInfo = (word) => (dispatch) => {
         }
       };
       axios.request(options).then( (response) => {
-        console.log(response.data);
-        dispatch({type: "FETCHING_WORD_INFO_SUCCESS", payload: {
-            word: response.data.word,
-            pronuntiation: response.data.pronuntiation.all,
-            results: [{
-                definition: response.data.results[0].definition,
-                examples: response.data.results[0].examples[0],
-                partOfSpeech: response.data.results[0].partOfSpeech,
-                synonyms: response.data.results[0].synonyms[0]
+        console.log("Response: ",response.data);
+        console.log("first definition array: ", response.data.results[0]);
+        console.log("word: ", response.data.word);
+        console.log(response.data.pronunciation);
+        let data = response.data.results[0] 
+        data= {...data,
+            pronunciation: response.data.pronunciation.all,
+            word: response.data.word
+        }
+        dispatch({type: "FETCHING_WORD_INFO_SUCCESS", payload: [data]
+            });
 
-            }],
 
-
-        }})
-    }).catch((error) => {
+        })
+    .catch((error) => {
         console.error(error);
         dispatch({type: "FETCHING_WORD_INFO_ERROR", payload: error.response});
     });

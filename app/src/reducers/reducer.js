@@ -1,17 +1,17 @@
 const initialState = {
     count: 0,
-    wordInfo: 
-    {
-        word: "",
-        pronunciation: {all: ""},
-        results: [{
-            definition: "",
-            examples: [""],
-            partOfSpeech: "",
-            synonyms: [""]
-        }],
+    wordInfo: [],
+    // {
+    //     word: "",
+    //     pronunciation: {all: ""},
+    //     results: [{
+    //         definition: "",
+    //         examples: [""],
+    //         partOfSpeech: "",
+    //         synonyms: [""]
+    //     }],
 
-    },
+    // },
     loading: false,
     error:"",
 
@@ -23,19 +23,11 @@ export const reducer = (state=initialState, action) => {
         case "FETCHING_WORD_INFO_START":
               return {...state, loading: true};
         case "FETCHING_WORD_INFO_SUCCESS":
-            return{...state, loading: false, wordInfo: {...state.wordInfo,
-                word: action.payload,
-                pronunciation: {all: action.payload},
-                results: [{
-                    definition: action.payload,
-                    examples: [action.payload],
-                    partOfSpeech: action.payload,
-                    synonyms: [action.payload]
-                }],
-            }};
+            return{...state, loading: false, wordInfo: action.payload
+            };
         case "FETCHING_WORD_INFO_ERROR":
             return{...state, loading: false, error: action.payload}
-    default:
+        default:
         return state
     }
 }

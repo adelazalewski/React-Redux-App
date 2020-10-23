@@ -3,7 +3,7 @@ import Header from "./components/header";
 import SearchBar from "./components/searchBar";
 import Footer from "./components/footer";
 import './App.css';
-import WordCard from './components/wordInfo';
+import WordCard from './components/wordCard';
 
 
 function App() {
@@ -12,9 +12,6 @@ function App() {
       <Header />
       <div className="wrapper">
       <SearchBar />
-      {/* <hr/> */}
-      {/* <div className="push"></div> */}
-     
       <WordCard />
       </div>
       <Footer />
