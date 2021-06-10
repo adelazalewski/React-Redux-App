@@ -1,20 +1,7 @@
 const initialState = {
-    count: 0,
     wordInfo: [],
-    // {
-    //     word: "",
-    //     pronunciation: {all: ""},
-    //     results: [{
-    //         definition: "",
-    //         examples: [""],
-    //         partOfSpeech: "",
-    //         synonyms: [""]
-    //     }],
-
-    // },
     loading: false,
     error:"",
-
 }
 export const reducer = (state=initialState, action) => {
     switch(action.type){
