@@ -1,8 +1,5 @@
 import axios from "axios";
 
-export const setCount = () => {
-    return{type: "COUNT_PLUS_ONE"}
-}
 
 export const getWordInfo = (word) => (dispatch) => {
     dispatch({type: "FETCHING_WORD_INFO_START"});
