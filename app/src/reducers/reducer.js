@@ -5,8 +5,6 @@ const initialState = {
 }
 export const reducer = (state=initialState, action) => {
     switch(action.type){
-        case "COUNT_PLUS_ONE":
-            return{...state, count: state.count + 1}
         case "FETCHING_WORD_INFO_START":
               return {...state, loading: true};
         case "FETCHING_WORD_INFO_SUCCESS":
