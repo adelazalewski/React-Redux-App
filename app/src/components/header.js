@@ -8,7 +8,7 @@ function Header(props) {
 return(
     <header className="App-header">
         <h1>React-Redux Dictionary App</h1>
-        <p> by Adela Zalewski</p>
+        
 
     </header>
 )
